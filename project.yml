@@ -1,0 +1,42 @@
+name: OneScreen
+options:
+  bundleIdPrefix: com.heyitsbrian
+  deploymentTarget:
+    macOS: "26.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    DEVELOPMENT_TEAM: L6X8U2TQ6F
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    ENABLE_HARDENED_RUNTIME: YES
+    SWIFT_STRICT_CONCURRENCY: minimal
+targets:
+  OneScreen:
+    type: application
+    platform: macOS
+    sources:
+      - App
+    entitlements:
+      path: App/OneScreen.entitlements
+      properties:
+        com.apple.security.app-sandbox: false
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: OneScreen
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSApplicationCategoryType: public.app-category.utilities
+        LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
+        LSUIElement: true
+        NSHumanReadableCopyright: Copyright 2026 Brian Meyer
+        CFBundleURLTypes:
+          - CFBundleURLName: com.heyitsbrian.onescreen
+            CFBundleURLSchemes: [onescreen]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.heyitsbrian.onescreen
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
