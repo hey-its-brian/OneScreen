@@ -31,6 +31,10 @@ System Settings each time.
 The app only ever acts on displays that are **not** the main display, so it cannot
 blank the screen you are looking at.
 
+## Install
+
+Download `OneScreen.zip` from the latest [release](https://github.com/hey-its-brian/OneScreen/releases), unzip, and drag OneScreen.app to Applications. It is signed and notarized.
+
 ## Build
 
 Requires Xcode and [xcodegen](https://github.com/yonaskolb/XcodeGen) (`brew install xcodegen`).
